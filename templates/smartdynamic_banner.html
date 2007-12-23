@@ -1,0 +1,15 @@
+<div id="<{$banner.id}>">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+	codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
+	width="<{$banner.width}>" height="<{$banner.height}>" id="<{$banner.id}>" align="middle">
+	<param name="allowScriptAccess" value="sameDomain" />
+	<param name="movie" value="<{$banner.url}>" />
+	<param name="menu" value="false" />
+	<param name="quality" value="best" />
+	<param name="bgcolor" value="#ffffff" />
+	<embed src="<{$banner.url}>?xmlsrc=<{$banner.xmlsrc}>" menu="false" quality="best"
+		bgcolor="#ffffff" width="<{$banner.width}>" height="<{$banner.height}>" name="<{$banner.id}>"
+		align="middle" allowScriptAccess="sameDomain"
+		type="application/x-shockwave-flash"
+		pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>

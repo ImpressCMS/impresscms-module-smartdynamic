@@ -1,0 +1,27 @@
+<script type="text/javascript" src="<{$xoops_url}>/modules/smartdynamic/include/swfobject.js" valign="top"></script>
+<div id="divflashcontent<{$block.id}>" style="width: <{$block.width}>px; border: <{$block.border_size}>px solid <{$block.border_color}>;">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
+	codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0"
+	width="<{$block.width}>" height="<{$block.height}>" id="<{$block.id}>" align="middle">
+		<param name="movie" value="<{$block.url}>?xmlsrc=<{$block.xmlsrc}>" />
+		<param name="quality" value="high" />
+		<param name="salign" value="top" />
+		<param name="bgcolor" value="#ffffff" />
+	<embed
+		src="<{$block.url}>?xmlsrc=<{$block.xmlsrc}>"
+		quality="high"
+		bgcolor="#ffffff"
+		width="<{$block.width}>" height="<{$block.height}>"
+		name="<{$block.id}>"
+		salign="top"
+		version="8"
+		pluginspage="http://www.macromedia.com/go/getflashplayer"
+	/>
+</object>
+</div>
+<script type="text/javascript">
+   var so = new SWFObject("<{$block.url}>?xmlsrc=<{$block.xmlsrc}>", "<{$block.id}>", "<{$block.width}>", "<{$block.height}>", "8", "#ffffff");
+   so.addParam("salign", "t");
+   so.addParam("quality", "high");
+   so.write("flashcontent<{$block.id}>");
+</script>
